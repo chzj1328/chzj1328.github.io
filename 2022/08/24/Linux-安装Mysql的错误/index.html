@@ -20,27 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="Linux_Centos7在安装Mysql常见错误依赖时失败MySql安装问题问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败解决方案问题二:Centos7在安装Mysql服务器(server)时失败解决方案问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败123warning: mysql-community-libs-8.0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/08/24/hello-world/index.html">
+<meta property="og:title" content="Linux_安装Mysql的错误">
+<meta property="og:url" content="http://example.com/2022/08/24/Linux-%E5%AE%89%E8%A3%85Mysql%E7%9A%84%E9%94%99%E8%AF%AF/index.html">
 <meta property="og:site_name" content="java小豪">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Linux_Centos7在安装Mysql常见错误依赖时失败MySql安装问题问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败解决方案问题二:Centos7在安装Mysql服务器(server)时失败解决方案问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败123warning: mysql-community-libs-8.0">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-23T16:48:09.903Z">
-<meta property="article:modified_time" content="2022-08-23T16:48:09.904Z">
+<meta property="article:published_time" content="2022-08-23T18:03:02.000Z">
+<meta property="article:modified_time" content="2022-08-23T18:03:37.765Z">
 <meta property="article:author" content="java小豪">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2022/08/24/hello-world/">
+<link rel="canonical" href="http://example.com/2022/08/24/Linux-%E5%AE%89%E8%A3%85Mysql%E7%9A%84%E9%94%99%E8%AF%AF/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/08/24/hello-world/","path":"2022/08/24/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/08/24/Linux-%E5%AE%89%E8%A3%85Mysql%E7%9A%84%E9%94%99%E8%AF%AF/","path":"2022/08/24/Linux-安装Mysql的错误/","title":"Linux_安装Mysql的错误"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | java小豪</title>
+<title>Linux_安装Mysql的错误 | java小豪</title>
   
 
 
@@ -117,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux-Centos7%E5%9C%A8%E5%AE%89%E8%A3%85Mysql%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E4%BE%9D%E8%B5%96%E6%97%B6%E5%A4%B1%E8%B4%A5"><span class="nav-number">1.</span> <span class="nav-text">Linux_Centos7在安装Mysql常见错误依赖时失败</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySql%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">MySql安装问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80-Centos7%E5%9C%A8%E5%AE%89%E8%A3%85Mysql%E4%BE%9D%E8%B5%96-libs-%E6%88%96%E5%AE%A2%E6%88%B7%E7%AB%AF-client-%E6%97%B6%E5%A4%B1%E8%B4%A5"><span class="nav-number">1.1.1.</span> <span class="nav-text">问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%8C-Centos7%E5%9C%A8%E5%AE%89%E8%A3%85Mysql%E6%9C%8D%E5%8A%A1%E5%99%A8-server-%E6%97%B6%E5%A4%B1%E8%B4%A5"><span class="nav-number">1.1.2.</span> <span class="nav-text">问题二:Centos7在安装Mysql服务器(server)时失败</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80-Centos7%E5%9C%A8%E5%AE%89%E8%A3%85Mysql%E4%BE%9D%E8%B5%96-libs-%E6%88%96%E5%AE%A2%E6%88%B7%E7%AB%AF-client-%E6%97%B6%E5%A4%B1%E8%B4%A5-1"><span class="nav-number">1.1.3.</span> <span class="nav-text">问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-2"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%8C-Centos7%E5%9C%A8%E5%AE%89%E8%A3%85Mysql%E6%9C%8D%E5%8A%A1%E5%99%A8-server-%E6%97%B6%E5%A4%B1%E8%B4%A5-1"><span class="nav-number">1.1.4.</span> <span class="nav-text">问题二:Centos7在安装Mysql服务器(server)时失败</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-3"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,7 +178,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/24/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/24/Linux-%E5%AE%89%E8%A3%85Mysql%E7%9A%84%E9%94%99%E8%AF%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -190,12 +191,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | java小豪">
+      <meta itemprop="name" content="Linux_安装Mysql的错误 | java小豪">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          Linux_安装Mysql的错误
         </h1>
 
         <div class="post-meta-container">
@@ -205,8 +206,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-08-24 00:48:09" itemprop="dateCreated datePublished" datetime="2022-08-24T00:48:09+08:00">2022-08-24</time>
+      <time title="创建时间：2022-08-24 02:03:02 / 修改时间：02:03:37" itemprop="dateCreated datePublished" datetime="2022-08-24T02:03:02+08:00">2022-08-24</time>
     </span>
 
   
@@ -216,7 +218,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>367</span>
+      <span>919</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -234,19 +236,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="Linux-Centos7在安装Mysql常见错误依赖时失败"><a href="#Linux-Centos7在安装Mysql常见错误依赖时失败" class="headerlink" title="Linux_Centos7在安装Mysql常见错误依赖时失败"></a>Linux_Centos7在安装Mysql常见错误依赖时失败</h1><h2 id="MySql安装问题"><a href="#MySql安装问题" class="headerlink" title="MySql安装问题"></a>MySql安装问题</h2><h3 id="问题一-Centos7在安装Mysql依赖-libs-或客户端-client-时失败"><a href="#问题一-Centos7在安装Mysql依赖-libs-或客户端-client-时失败" class="headerlink" title="问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败"></a>问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败</h3><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><h3 id="问题二-Centos7在安装Mysql服务器-server-时失败"><a href="#问题二-Centos7在安装Mysql服务器-server-时失败" class="headerlink" title="问题二:Centos7在安装Mysql服务器(server)时失败"></a>问题二:Centos7在安装Mysql服务器(server)时失败</h3><h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><h3 id="问题一-Centos7在安装Mysql依赖-libs-或客户端-client-时失败-1"><a href="#问题一-Centos7在安装Mysql依赖-libs-或客户端-client-时失败-1" class="headerlink" title="问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败"></a>问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">warning: mysql-community-libs-8.0.28-1.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID 3a79bd29: NOKEY</span><br><span class="line">error: Failed dependencies:</span><br><span class="line">	mariadb-libs is obsoleted by mysql-community-libs-8.0.28-1.el7.x86_64</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li>先卸载mysql-libs</li>
+<li>再执行安装</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">先卸载mysql-libs</span></span><br><span class="line">yum remove mysql-libs</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">再执行安装</span></span><br><span class="line">rpm -ivh mysql-community-libs-8.0.28-1.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="问题二-Centos7在安装Mysql服务器-server-时失败-1"><a href="#问题二-Centos7在安装Mysql服务器-server-时失败-1" class="headerlink" title="问题二:Centos7在安装Mysql服务器(server)时失败"></a>问题二:Centos7在安装Mysql服务器(server)时失败</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">warning: mysql-community-server-8.0.28-1.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID 3a79bd29: NOKEY</span><br><span class="line">error: Failed dependencies:</span><br><span class="line">	mysql-community-icu-data-files = 8.0.28-1.el7 is needed by mysql-community-server-8.0.28-1.el7.x86_64</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li>解决的方法就是在rpm 语句后面加上 –nodeps –force，安装时忽略依赖关系</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在rpm -ivh mysql-community-server-8.0.28-1.el7.x86_64.rpm 添加参数--force --nodeps</span></span><br><span class="line">rpm -ivh mysql-community-server-8.0.28-1.el7.x86_64.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
     </div>
 
@@ -255,16 +259,19 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2022/08/24/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/08/24/Linux-%E5%AE%89%E8%A3%85Mysql%E7%9A%84%E9%94%99%E8%AF%AF/" rel="next" title="Linux_安装Mysql的错误">
-                  Linux_安装Mysql的错误 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
