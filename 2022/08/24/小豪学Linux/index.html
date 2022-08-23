@@ -20,25 +20,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="java小豪的小破站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="java小豪">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="小豪学Linux（一）1、课前小菜1、RPM软件包管理命令 安装软件的命令格式 rpm -ivh filename.rpm   升级软件的命令格式 rpm -Uvh filename.rpm   卸载软件的命令格式 rpm -e filename.rpm   查询软件描述信息的命令格式 rpm -qpi filename.rpm   列出软件文件信息的命令格式 rpm -qpl filename.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小豪学Linux">
+<meta property="og:url" content="http://example.com/2022/08/24/%E5%B0%8F%E8%B1%AA%E5%AD%A6Linux/index.html">
 <meta property="og:site_name" content="java小豪">
-<meta property="og:description" content="java小豪的小破站">
+<meta property="og:description" content="小豪学Linux（一）1、课前小菜1、RPM软件包管理命令 安装软件的命令格式 rpm -ivh filename.rpm   升级软件的命令格式 rpm -Uvh filename.rpm   卸载软件的命令格式 rpm -e filename.rpm   查询软件描述信息的命令格式 rpm -qpi filename.rpm   列出软件文件信息的命令格式 rpm -qpl filename.">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/Note/MDNote/%25E5%25B0%258F%25E8%25B1%25AA%25E5%25AD%25A6Linux.assets/1651642416947.png">
+<meta property="article:published_time" content="2022-08-23T18:13:45.000Z">
+<meta property="article:modified_time" content="2022-08-23T18:27:24.217Z">
 <meta property="article:author" content="java小豪">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Note/MDNote/%25E5%25B0%258F%25E8%25B1%25AA%25E5%25AD%25A6Linux.assets/1651642416947.png">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/08/24/%E5%B0%8F%E8%B1%AA%E5%AD%A6Linux/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/08/24/%E5%B0%8F%E8%B1%AA%E5%AD%A6Linux/","path":"2022/08/24/小豪学Linux/","title":"小豪学Linux"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>java小豪</title>
+<title>小豪学Linux | java小豪</title>
   
 
 
@@ -69,7 +74,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">java小豪</h1>
+      <p class="site-title">java小豪</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">javaxiaohao</p>
@@ -102,7 +107,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -115,6 +120,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E8%B1%AA%E5%AD%A6Linux%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">小豪学Linux（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E8%AF%BE%E5%89%8D%E5%B0%8F%E8%8F%9C"><span class="nav-number">1.1.</span> <span class="nav-text">1、课前小菜</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81RPM%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、RPM软件包管理命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81YUM%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、YUM软件包管理命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81systemctl%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、systemctl管理服务的常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text">2、新手必须掌握的Linux常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E3%80%81echo%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.1、echo命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E3%80%81date%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2、date命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E3%80%81wget%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.3、wget命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E3%80%81ps%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.4.</span> <span class="nav-text">1.4、ps命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5%E3%80%81top-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.5.</span> <span class="nav-text">1.5、top 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6%E3%80%81pidof%E5%92%8Ckill%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.6.</span> <span class="nav-text">1.6、pidof和kill命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7%E3%80%81ifconfig%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.7.</span> <span class="nav-text">1.7、ifconfig命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8%E3%80%81uname-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.8.</span> <span class="nav-text">1.8、uname 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-9%E3%80%81uptime%E5%92%8Cfree%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.9.</span> <span class="nav-text">1.9、uptime和free命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-10%E3%80%81who%E5%92%8Clast%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.10.</span> <span class="nav-text">1.10、who和last命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-11%E3%80%81history%E5%92%8Csosreport-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.11.</span> <span class="nav-text">1.11、history和sosreport 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E3%80%81pwd%E3%80%81cd%E3%80%81ls%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.12.</span> <span class="nav-text">2.1、pwd、cd、ls命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E3%80%81touch%E3%80%81mkdir%E3%80%81cp%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.13.</span> <span class="nav-text">2.2、touch、mkdir、cp命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E3%80%81mv%E3%80%81rm%E3%80%81dd%E5%92%8Cfile%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.14.</span> <span class="nav-text">2.3、mv、rm、dd和file命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4%E3%80%81tar%E3%80%81grep%E5%92%8Cfind%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.15.</span> <span class="nav-text">2.4、tar、grep和find命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93%EF%BC%9A%E5%A4%8D%E4%B9%A0%E9%A2%98"><span class="nav-number">1.2.16.</span> <span class="nav-text">小结：复习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E7%AE%A1%E9%81%93%E7%AC%A6%E3%80%81%E9%87%8D%E5%AE%9A%E5%90%91%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">3、管道符、重定向与环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E3%80%81%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1、输入输出重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E3%80%81-%E7%AE%A1%E9%81%93%E5%91%BD%E4%BB%A4%E7%AC%A6"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2、 管道命令符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3%E3%80%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BB%9F%E9%85%8D%E7%AC%A6"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3、命令行统配符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4%E3%80%81-%E5%B8%B8%E7%94%A8%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4、 常用的转义字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5%E3%80%81%E9%87%8D%E8%A6%81%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.5、重要的环境变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81Vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%8EShell%E5%91%BD%E4%BB%A4%E8%84%9A%E6%9C%AC"><span class="nav-number">1.4.</span> <span class="nav-text">4、Vim编辑器与Shell命令脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E3%80%81Vim%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1、Vim文本编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D%E7%A7%B0"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.1.1、配置主机名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2%E3%80%81%E9%85%8D%E7%BD%AE%E7%BD%91%E5%8D%A1%E4%BF%A1%E6%81%AF"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.1.2、配置网卡信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-3%E3%80%81%E9%85%8D%E7%BD%AEYum%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.1.3、配置Yum软件仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2%E3%80%81%E7%BC%96%E5%86%99Shell%E8%84%9A%E6%9C%AC"><span class="nav-number">1.5.</span> <span class="nav-text">4.2、编写Shell脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1%E3%80%81%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84%E8%84%9A%E6%9C%AC"><span class="nav-number">1.5.1.</span> <span class="nav-text">4.2.1、编写简单的脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2%E3%80%81%E6%8E%A5%E6%94%B6%E7%94%A8%E6%88%B7%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">1.5.2.</span> <span class="nav-text">4.2.2、接收用户的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-3%E3%80%81%E5%88%A4%E6%96%AD%E7%94%A8%E6%88%B7%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">1.5.3.</span> <span class="nav-text">4.2.3、判断用户的参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3%E3%80%81%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.6.</span> <span class="nav-text">4.3、流程控制语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-1%E3%80%81if%E6%9D%A1%E4%BB%B6%E6%B5%8B%E8%AF%95%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.6.1.</span> <span class="nav-text">4.3.1、if条件测试语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-2%E3%80%81for%E6%9D%A1%E4%BB%B6%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.6.2.</span> <span class="nav-text">4.3.2、for条件循环语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-3%E3%80%81while%E6%9D%A1%E4%BB%B6%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.6.3.</span> <span class="nav-text">4.3.3、while条件循环语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-4%E3%80%81case%E6%9D%A1%E4%BB%B6%E6%B5%8B%E8%AF%95%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.6.4.</span> <span class="nav-text">4.3.4、case条件测试语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4%E3%80%81%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.7.</span> <span class="nav-text">4.4、计划任务服务程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%EF%BC%9A"><span class="nav-number">1.7.1.</span> <span class="nav-text">注意事项：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E4%B8%8E%E6%9D%83%E9%99%90"><span class="nav-number">1.8.</span> <span class="nav-text">5、用户身份与权限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E3%80%81%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E4%B8%8E%E8%83%BD%E5%8A%9B"><span class="nav-number">1.8.1.</span> <span class="nav-text">5.1、用户身份与能力</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1%E3%80%81id%E5%91%BD%E4%BB%A4"><span class="nav-number">1.8.1.1.</span> <span class="nav-text">5.1.1、id命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2%E3%80%81useradd%E5%91%BD%E4%BB%A4"><span class="nav-number">1.8.1.2.</span> <span class="nav-text">5.1.2、useradd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3%E3%80%81groupadd%E5%91%BD%E4%BB%A4"><span class="nav-number">1.8.1.3.</span> <span class="nav-text">5.1.3、groupadd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4%E3%80%81usermod%E5%91%BD%E4%BB%A4"><span class="nav-number">1.8.1.4.</span> <span class="nav-text">5.1.4、usermod命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-5%E3%80%81passwd%E5%91%BD%E4%BB%A4"><span class="nav-number">1.8.1.5.</span> <span class="nav-text">5.1.5、passwd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-6%E3%80%81userdel"><span class="nav-number">1.8.1.6.</span> <span class="nav-text">5.1.6、userdel</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2%E3%80%81%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E4%B8%8E%E5%BD%92%E5%B1%9E"><span class="nav-number">1.8.2.</span> <span class="nav-text">5.2、文件权限与归属</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3%E3%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E7%89%B9%E6%AE%8A%E6%9D%83%E9%99%90"><span class="nav-number">1.9.</span> <span class="nav-text">5.3、文件的特殊权限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-1%E3%80%81SUID"><span class="nav-number">1.9.1.</span> <span class="nav-text">5.3.1、SUID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-2%E3%80%81SGID"><span class="nav-number">1.9.2.</span> <span class="nav-text">5.3.2、SGID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-3%E3%80%81SBIT"><span class="nav-number">1.9.3.</span> <span class="nav-text">5.3.3、SBIT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4%E3%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7"><span class="nav-number">1.10.</span> <span class="nav-text">5.4、文件的隐藏属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-1%E3%80%81chattr%E5%91%BD%E4%BB%A4"><span class="nav-number">1.10.1.</span> <span class="nav-text">5.4.1、chattr命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-2%E3%80%81lsattr%E5%91%BD%E4%BB%A4"><span class="nav-number">1.10.2.</span> <span class="nav-text">5.4.2、lsattr命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5%E3%80%81%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8"><span class="nav-number">1.11.</span> <span class="nav-text">5.5、文件访问控制列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-1%E3%80%81setfacl%E5%91%BD%E4%BB%A4"><span class="nav-number">1.11.1.</span> <span class="nav-text">5.5.1、setfacl命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-2%E3%80%81getfacl%E5%91%BD%E4%BB%A4"><span class="nav-number">1.11.2.</span> <span class="nav-text">5.5.2、getfacl命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6%E3%80%81su-%E5%91%BD%E4%BB%A4%E4%B8%8E-sudo-%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.12.</span> <span class="nav-text">5.6、su 命令与 sudo 服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%A1%E7%90%86%E7%A1%AC%E7%9B%98"><span class="nav-number">1.13.</span> <span class="nav-text">6、存储结构和管理硬盘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1%E3%80%81%E4%B8%80%E5%88%87%E4%BB%8E%E2%80%9D-x2F-%E2%80%9C%E5%BC%80%E5%A7%8B"><span class="nav-number">1.13.1.</span> <span class="nav-text">6.1、一切从”&#x2F;“开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2%E3%80%81%E7%89%A9%E7%90%86%E8%AE%BE%E5%A4%87%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">1.13.2.</span> <span class="nav-text">6.2、物理设备的命名规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3%E3%80%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%B5%84%E6%96%99"><span class="nav-number">1.13.3.</span> <span class="nav-text">6.3、文件系统与数据资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4%E3%80%81%E6%8C%82%E8%BD%BD%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87"><span class="nav-number">1.13.4.</span> <span class="nav-text">6.4、挂载硬件设备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-1%E3%80%81mount%E5%91%BD%E4%BB%A4"><span class="nav-number">1.13.4.1.</span> <span class="nav-text">6.4.1、mount命令</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -168,16 +174,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/24/%E5%B0%8F%E8%B1%AA%E5%AD%A6Linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -191,13 +198,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | java小豪">
+      <meta itemprop="name" content="小豪学Linux | java小豪">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/08/24/%E5%B0%8F%E8%B1%AA%E5%AD%A6Linux/" class="post-title-link" itemprop="url">小豪学Linux</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          小豪学Linux
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -245,7 +252,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="小豪学Linux（一）"><a href="#小豪学Linux（一）" class="headerlink" title="小豪学Linux（一）"></a>小豪学Linux（一）</h1><h2 id="1、课前小菜"><a href="#1、课前小菜" class="headerlink" title="1、课前小菜"></a>1、课前小菜</h2><h3 id="1、RPM软件包管理命令"><a href="#1、RPM软件包管理命令" class="headerlink" title="1、RPM软件包管理命令"></a>1、<strong>RPM软件包管理命令</strong></h3><ul>
+        <h1 id="小豪学Linux（一）"><a href="#小豪学Linux（一）" class="headerlink" title="小豪学Linux（一）"></a>小豪学Linux（一）</h1><h2 id="1、课前小菜"><a href="#1、课前小菜" class="headerlink" title="1、课前小菜"></a>1、课前小菜</h2><h3 id="1、RPM软件包管理命令"><a href="#1、RPM软件包管理命令" class="headerlink" title="1、RPM软件包管理命令"></a>1、<strong>RPM软件包管理命令</strong></h3><ul>
 <li><strong>安装软件的命令格式 rpm -ivh filename.rpm</strong>  </li>
 <li><strong>升级软件的命令格式 rpm -Uvh filename.rpm</strong>  </li>
 <li><strong>卸载软件的命令格式 rpm -e filename.rpm</strong>  </li>
@@ -1704,7 +1711,6 @@
 </tr>
 </tbody></table>
 
-      
     </div>
 
     
@@ -1712,215 +1718,25 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/08/24/Linux-%E5%AE%89%E8%A3%85Mysql%E7%9A%84%E9%94%99%E8%AF%AF/" rel="prev" title="Linux_安装Mysql的错误">
+                  <i class="fa fa-chevron-left"></i> Linux_安装Mysql的错误
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/24/Linux-%E5%AE%89%E8%A3%85Mysql%E7%9A%84%E9%94%99%E8%AF%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="java小豪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="java小豪">
-      <meta itemprop="description" content="java小豪的小破站">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | java小豪">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/08/24/Linux-%E5%AE%89%E8%A3%85Mysql%E7%9A%84%E9%94%99%E8%AF%AF/" class="post-title-link" itemprop="url">Linux_安装Mysql的错误</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-08-24 02:03:02 / 修改时间：02:18:36" itemprop="dateCreated datePublished" datetime="2022-08-24T02:03:02+08:00">2022-08-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>919</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Linux-Centos7在安装Mysql常见错误依赖时失败"><a href="#Linux-Centos7在安装Mysql常见错误依赖时失败" class="headerlink" title="Linux_Centos7在安装Mysql常见错误依赖时失败"></a>Linux_Centos7在安装Mysql常见错误依赖时失败</h1><h2 id="MySql安装问题"><a href="#MySql安装问题" class="headerlink" title="MySql安装问题"></a>MySql安装问题</h2><h3 id="问题一-Centos7在安装Mysql依赖-libs-或客户端-client-时失败"><a href="#问题一-Centos7在安装Mysql依赖-libs-或客户端-client-时失败" class="headerlink" title="问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败"></a>问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败</h3><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><h3 id="问题二-Centos7在安装Mysql服务器-server-时失败"><a href="#问题二-Centos7在安装Mysql服务器-server-时失败" class="headerlink" title="问题二:Centos7在安装Mysql服务器(server)时失败"></a>问题二:Centos7在安装Mysql服务器(server)时失败</h3><h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><h3 id="问题一-Centos7在安装Mysql依赖-libs-或客户端-client-时失败-1"><a href="#问题一-Centos7在安装Mysql依赖-libs-或客户端-client-时失败-1" class="headerlink" title="问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败"></a>问题一:Centos7在安装Mysql依赖(libs)或客户端(client)时失败</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">warning: mysql-community-libs-8.0.28-1.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID 3a79bd29: NOKEY</span><br><span class="line">error: Failed dependencies:</span><br><span class="line">	mariadb-libs is obsoleted by mysql-community-libs-8.0.28-1.el7.x86_64</span><br></pre></td></tr></table></figure>
-
-<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li>先卸载mysql-libs</li>
-<li>再执行安装</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">先卸载mysql-libs</span></span><br><span class="line">yum remove mysql-libs</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">再执行安装</span></span><br><span class="line">rpm -ivh mysql-community-libs-8.0.28-1.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
-
-<h3 id="问题二-Centos7在安装Mysql服务器-server-时失败-1"><a href="#问题二-Centos7在安装Mysql服务器-server-时失败-1" class="headerlink" title="问题二:Centos7在安装Mysql服务器(server)时失败"></a>问题二:Centos7在安装Mysql服务器(server)时失败</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">warning: mysql-community-server-8.0.28-1.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID 3a79bd29: NOKEY</span><br><span class="line">error: Failed dependencies:</span><br><span class="line">	mysql-community-icu-data-files = 8.0.28-1.el7 is needed by mysql-community-server-8.0.28-1.el7.x86_64</span><br></pre></td></tr></table></figure>
-
-<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li>解决的方法就是在rpm 语句后面加上 –nodeps –force，安装时忽略依赖关系</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在rpm -ivh mysql-community-server-8.0.28-1.el7.x86_64.rpm 添加参数--force --nodeps</span></span><br><span class="line">rpm -ivh mysql-community-server-8.0.28-1.el7.x86_64.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/24/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="java小豪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="java小豪">
-      <meta itemprop="description" content="java小豪的小破站">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | java小豪">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/08/24/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-08-24 00:48:09" itemprop="dateCreated datePublished" datetime="2022-08-24T00:48:09+08:00">2022-08-24</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>367</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
